@@ -1,0 +1,23 @@
+{
+	"folders":
+	[
+		{
+			"file_exclude_patterns":
+			[
+				"*.dll",
+				"*.meta"
+			],
+			"path": "/Users/antoine/GitHub/Corvophraseur/Assets/Scripts"
+		},
+		{
+			"file_exclude_patterns":
+			[
+				"*.dll",
+				"*.meta"
+			],
+			"path": "/Users/antoine/GitHub/Corvophraseur/Assets/Plugins"
+		}
+	],
+	"solution_file": "./Corvophraseur-csharp.sln"
+}
+

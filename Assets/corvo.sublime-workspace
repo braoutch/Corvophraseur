@@ -1,0 +1,632 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"su",
+				"summoner"
+			],
+			[
+				"time",
+				"timeStep"
+			],
+			[
+				"ti",
+				"timeStep"
+			],
+			[
+				"Get",
+				"GetComponent"
+			],
+			[
+				"Can",
+				"Canvas2"
+			],
+			[
+				"Emp",
+				"String.Empty"
+			],
+			[
+				"Data",
+				"DataBase"
+			],
+			[
+				"pref",
+				"prefabParentRecentGames"
+			],
+			[
+				"name",
+				"nameList"
+			],
+			[
+				"canva",
+				"canvas1"
+			],
+			[
+				"Cunt",
+				"Count"
+			],
+			[
+				"data",
+				"dataToSend"
+			],
+			[
+				"V",
+				"Value"
+			],
+			[
+				"end",
+				"endOfChamp"
+			],
+			[
+				"eve",
+				"eventSystem"
+			],
+			[
+				"loaded",
+				"Application.loadedLevel"
+			],
+			[
+				"LoadL",
+				"Application.LoadLevel(name)"
+			],
+			[
+				"Te",
+				"Text.text"
+			],
+			[
+				"play",
+				"playerTable"
+			],
+			[
+				"pla",
+				"playerList"
+			],
+			[
+				"ga",
+				"gameObject"
+			],
+			[
+				"Delet",
+				"DeletingUser"
+			],
+			[
+				"Ca",
+				"Canvas"
+			],
+			[
+				"summ",
+				"summonerName"
+			],
+			[
+				"Fin",
+				"FindGameObjectsWithTag	tag"
+			],
+			[
+				"Arra",
+				"ArrayList"
+			],
+			[
+				"Des",
+				"DestroyOld"
+			],
+			[
+				"pl",
+				"playerList"
+			],
+			[
+				"GetC",
+				"GetComponent"
+			],
+			[
+				"Pl",
+				"PlayerTable"
+			],
+			[
+				"bou",
+				"boutonInstance"
+			],
+			[
+				"player",
+				"playerList"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"skin",
+				"skinImage"
+			],
+			[
+				"Vect",
+				"Vector3	x, y, z"
+			],
+			[
+				"sum",
+				"summonerName"
+			],
+			[
+				"cha",
+				"championKey"
+			],
+			[
+				"en",
+				"enemieNames"
+			],
+			[
+				"enem",
+				"enemieSkinTextures"
+			],
+			[
+				"ene",
+				"enemiesID"
+			],
+			[
+				"text",
+				"texture"
+			],
+			[
+				"enemieSkin",
+				"enemieSkinTextures"
+			],
+			[
+				"Tex",
+				"Texture2D"
+			],
+			[
+				"gam",
+				"GameObject"
+			],
+			[
+				"s",
+				"string"
+			],
+			[
+				"rune",
+				"runeNumber"
+			],
+			[
+				"run",
+				"runeNumber"
+			],
+			[
+				"ave",
+				"averageCs"
+			],
+			[
+				"aver",
+				"averageAssists"
+			],
+			[
+				"av",
+				"averageDeaths"
+			],
+			[
+				"GetKDA",
+				"GetKDARequest"
+			],
+			[
+				"runes",
+				"runesText"
+			],
+			[
+				"field",
+				"field1"
+			],
+			[
+				"GetRunes",
+				"GetRunesRequest"
+			],
+			[
+				"enn",
+				"ennemiesID=j"
+			],
+			[
+				"fie",
+				"field1"
+			],
+			[
+				"da",
+				"dataArriving"
+			],
+			[
+				"wait",
+				"WaitForSeconds(seconds)"
+			],
+			[
+				"fiel",
+				"field2"
+			],
+			[
+				"debug",
+				"Debug"
+			],
+			[
+				"GetFlo",
+				"GetFloatRequest"
+			],
+			[
+				"float",
+				"floatToStore"
+			],
+			[
+				"Start",
+				"StartCoroutine"
+			],
+			[
+				"T",
+				"Text"
+			],
+			[
+				"Uni",
+				"UnityEngine"
+			],
+			[
+				"strin",
+				"stringToDisplay"
+			],
+			[
+				"Dis",
+				"Display"
+			],
+			[
+				"enca",
+				"encapsul1"
+			],
+			[
+				"WaitForS",
+				"WaitForSeconds(seconds)"
+			],
+			[
+				"Wai",
+				"WaitForWWW"
+			],
+			[
+				"De",
+				"Debug"
+			],
+			[
+				"te",
+				"Text"
+			],
+			[
+				"WWW",
+				"WWW(url)"
+			],
+			[
+				"Tran",
+				"Transform	[class]"
+			],
+			[
+				"Gam",
+				"GameObject	[class]"
+			],
+			[
+				"ne",
+				"networkManager"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "corvo.sublime-project",
+			"settings":
+			{
+				"buffer_size": 346,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Unity3D Build System/Unity.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Unity3D Build System/Unity.sublime-build",
+					""
+				],
+				[
+					"Packages/Unity3D Build System/Unity.sublime-build",
+					"Clean"
+				]
+			],
+			[
+				"Packages/Unity3D Build System/Unity.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 307.0,
+		"last_filter": "ins",
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"late",
+				"LaTeXTools: Reconfigure and migrate settings"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"om",
+				"OmniSharpSublime: Build"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import os; os.environ['PATH']",
+			"command:latexmk -cd -e $pdflatex='pdflatex -interaction=nonstopmode -synctex=1 %S %O' -f -pdf test.tex",
+			"command:latexmk -cd -e $pdflatex = 'pdflatex -interaction=nonstopmode -synctex=1 %S %O' -f -pdf test.tex",
+			"latexmk -cd -e $pdflatex = 'pdflatex -interaction=nonstopmode -synctex=1 %S %O' -f -pdf test.tex",
+			"latexmk -cd -e $pdflatex ='pdflatex -interaction=nonstopmode -synctex=1 %S %O' -f -pdf test.tex",
+			"import os; os.environ['PATH']",
+			"import os; os.environ['/Applications/Sublime\\ Text\\ 3.app/Contents/SharedSupport/bin/subl']",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/antoine/GitHub/Corvophraseur/Assets/Scripts"
+	],
+	"file_history":
+	[
+		"/Users/antoine/GitHub/Corvophraseur/Assets/Scripts/CorvoEngine.cs",
+		"/Users/antoine/GitHub/LoL-Companion/LoL Companion/Assets/Plugins/DataBase.js",
+		"/Users/antoine/GitHub/LoL-Companion/LoL Companion/Assets/Scripts/ButtonScript.cs",
+		"/Users/antoine/GitHub/Corvophraseur/Assets/Plugins/dbAccess.js",
+		"/Users/antoine/GitHub/LoL-Companion/LoL Companion/Assets/Scripts/GetData.cs",
+		"/Users/antoine/Desktop/LoL Companion/Assets/Scripts/ButtonScript.cs",
+		"/Users/antoine/GitHub/LoL-Companion/LoL Companion/Assets/Scripts/GetOwnData.cs",
+		"/Users/antoine/Desktop/LoL Companion/Assets/Scripts/GetData.cs",
+		"/Users/antoine/Desktop/LoL Companion/Assets/Plugins/dbAccess.js",
+		"/Users/antoine/Desktop/LoL Companion/Assets/Scripts/DataBase.js",
+		"/Users/antoine/Desktop/LoL Companion/Assets/Scripts/GetOwnData.cs",
+		"/Users/antoine/Desktop/Local/Test2D/Assets/Scripts/Game/MapSpawner.cs",
+		"/Users/antoine/Desktop/Local/Test2D/Assets/Scripts/Game/Achievements.cs",
+		"/Users/antoine/Desktop/LoL Companion/Assets/Scripts/DeleteMode.cs",
+		"/Users/antoine/Desktop/dans le domaine des outils numériques d'aide a la",
+		"/Users/antoine/Library/Application Support/Sublime Text 3/Packages/User/Base File.sublime-settings",
+		"/Users/antoine/Desktop/Local/RenderingPluginExample45/RenderingPlugin/RenderingPlugin.cpp",
+		"/Users/antoine/Desktop/LoL Companion/Assets/Scripts/DisplayInfo.cs",
+		"/Users/antoine/Library/Application Support/Sublime Text 3/Packages/Alignment/Default (OSX).sublime-keymap",
+		"/Users/antoine/Downloads/SimpleJSON/JSON Tests/CSharp/Test_CSharp.cs",
+		"/Users/antoine/Desktop/LoL Companion/Assets/Plugins/SimpleJSON.cs",
+		"/Users/antoine/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/antoine/Desktop/LoL Companion/LoL Companion.sublime-project",
+		"/Users/antoine/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/antoine/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/antoine/Desktop/LoL Companion/HomeMade MiddleVR.sublime-project",
+		"/Users/antoine/Desktop/Test/Assets/Scripts/OCP.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"10",
+			"www[",
+			"www",
+			"key",
+			"donnee",
+			"donnée",
+			"isplaying",
+			"RecentGames",
+			"RecentGmes",
+			"DisplayData",
+			"playerli",
+			"donneesBase",
+			"trim",
+			"runeact",
+			"coucou",
+			"quer",
+			"call",
+			"starting",
+			"enemie",
+			"k",
+			"debug",
+			"json",
+			"sens",
+			"ernst",
+			"etud",
+			"percept",
+			"frustr",
+			"frust",
+			"frustr"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"MostPlayedChamp"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "corvo.sublime-project",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 346,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								330,
+								330
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "corvo.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
