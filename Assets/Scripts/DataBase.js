@@ -28,10 +28,6 @@ var donneesBase : ArrayList = new ArrayList(); 	///LES LIGNES DE LA BASE LORS DE
 //On aura besoin du genre
 var genreActuel;
 
-
-
-
-
 ///////AU DEBUT ON CREE LA TABLE SI ELLE N'EXISTE PAS
 function Start () 
 {
@@ -49,19 +45,22 @@ function Start ()
 	var valeursColonnesPref = new Array ("PRIMARY KEY");
 	var valeursColonnesGab = new Array ("PRIMARY KEY");
 
-	try
-	{
-		maBase.CreateTable (verbTable,nomColonnesVerb,valeursColonnesVerb);
-		maBase.CreateTable (adjTable,nomColonnesAdj,valeursColonnesAdj);
-		maBase.CreateTable (nomsTable,nomColonnesNoms,valeursColonnesNoms);
-		maBase.CreateTable (prefTable,nomColonnesPref,valeursColonnesPref);
-		maBase.CreateTable (gabTable,nomColonnesGab,valeursColonnesGab);
-	}
-	
-	catch(e)
-	{
-		Debug.Log("Erreur normale : " + e);
-	}
+////////////////////////////////////////////////////////////
+//////////DÉCOMMENTER POUR RECRÉER LA BASE//////////////////
+////////////////////////////////////////////////////////////
+// try
+// {
+// 	maBase.CreateTable (verbTable,nomColonnesVerb,valeursColonnesVerb);
+// 	maBase.CreateTable (adjTable,nomColonnesAdj,valeursColonnesAdj);
+// 	maBase.CreateTable (nomsTable,nomColonnesNoms,valeursColonnesNoms);
+// 	maBase.CreateTable (prefTable,nomColonnesPref,valeursColonnesPref);
+// 	maBase.CreateTable (gabTable,nomColonnesGab,valeursColonnesGab);
+// }
+
+// catch(e)
+// {
+// 	Debug.Log("Erreur normale : " + e);
+// }
 
 
 // var verbes = [["accéder", "2"], ["accélérer", "2"], ["ajuster", "2"], ["améliorer", "2"], ["amplifier", "2"], ["analyser", "2"], ["annuler", "2"], ["bouffoner", "2"], ["bouillir", "2"], ["calcifrer", "2"], ["compresser", "2"], ["créer", "2"], ["décélérer", "2"], ["décoder", "2"], ["décrypter", "2"], ["déstabiliser", "2"], ["détecter", "2"], ["diminuer", "2"], ["dupliquer", "2"], ["encoder", "2"], ["encrypter", "2"], ["fracasser", "2"], ["induire", "2"], ["inhiber", "2"], ["inverser", "2"], ["ioniser", "2"], ["moduler", "2"], ["neutraliser", "2"], ["optimiser", "2"], ["phaser", "2"], ["polariser", "2"], ["pournifier", "2"], ["réarranger", "2"], ["recombiner", "2"], ["recréer", "2"], ["rediriger", "2"], ["relayer", "2"], ["scanner", "2"], ["signaler", "2"], ["stabiliser", "2"], ["surcharger", "2"], ["transformer", "2"], ["trouer", "2"], ["zombifier", "2"]];
@@ -278,6 +277,11 @@ public function NewCorvoPhrase()
 
 			return [adjSelected,donneesBase[index][2]];
 		}
+
+		public function CopyToSystem(){
+			GUIUtility.systemCopyBuffer = corvoTexte.GetComponent(Text).text;
+		}
+
 /*
 
 

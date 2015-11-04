@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"ge",
+				"genreActuel"
+			],
+			[
+				"adj",
+				"adjSelected"
+			],
+			[
+				"gab",
+				"gabarit"
+			],
+			[
+				"cor",
+				"corvoTexte"
+			],
+			[
+				"ver",
+				"verbe"
+			],
+			[
+				"Fin",
+				"FindVerb"
+			],
+			[
+				"ga",
+				"gabarit"
+			],
+			[
+				"Ga",
+				"GabTable"
+			],
+			[
+				"verb",
+				"verbSelected"
+			],
+			[
 				"su",
 				"summoner"
 			],
@@ -84,10 +120,6 @@
 				"playerList"
 			],
 			[
-				"ga",
-				"gameObject"
-			],
-			[
 				"Delet",
 				"DeletingUser"
 			],
@@ -98,10 +130,6 @@
 			[
 				"summ",
 				"summonerName"
-			],
-			[
-				"Fin",
-				"FindGameObjectsWithTag	tag"
 			],
 			[
 				"Arra",
@@ -311,14 +339,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "corvo.sublime-project",
-			"settings":
-			{
-				"buffer_size": 346,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/Unity3D Build System/Unity.sublime-build",
 	"build_system_choices":
@@ -416,6 +436,8 @@
 	],
 	"file_history":
 	[
+		"/Users/antoine/GitHub/Corvophraseur/Assets/corvo.sublime-project",
+		"/Users/antoine/GitHub/Corvophraseur/Assets/Scripts/DataBase.js",
 		"/Users/antoine/GitHub/Corvophraseur/Assets/Scripts/CorvoEngine.cs",
 		"/Users/antoine/GitHub/LoL-Companion/LoL Companion/Assets/Plugins/DataBase.js",
 		"/Users/antoine/GitHub/LoL-Companion/LoL Companion/Assets/Scripts/ButtonScript.cs",
@@ -508,38 +530,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "corvo.sublime-project",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 346,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								330,
-								330
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
