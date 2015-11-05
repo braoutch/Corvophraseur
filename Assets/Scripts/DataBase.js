@@ -28,6 +28,21 @@ var donneesBase : ArrayList = new ArrayList(); 	///LES LIGNES DE LA BASE LORS DE
 //On aura besoin du genre
 var genreActuel;
 
+//Et ça c'est pour l'édition / l'affichage de la base de donnée
+var panels : GameObject[];
+var inputField : GameObject;
+var boutonGenre : GameObject;
+var boutonPrefixe : GameObject;
+var inputField2 : GameObject;
+
+var nameTexts : GameObject[] ;
+var verbTexts : GameObject[] ;
+var adjTexts: GameObject[] ;
+var prefText : GameObject;
+var gabText : GameObject;
+
+var namePrefab : GameObject;
+
 ///////AU DEBUT ON CREE LA TABLE SI ELLE N'EXISTE PAS
 function Start () 
 {
@@ -107,6 +122,7 @@ function Start ()
 // 	}
 
 NewCorvoPhrase();
+MakeDisplay();
 
 }
 
@@ -144,6 +160,9 @@ public function NewCorvoPhrase()
 				if(Mathf.Sign(Random.Range(-1f,1f)) == 1)
 					verbe[0] = AddPrefixe(verbe[0]);
 			}
+
+			if(i==0)
+				verbe[0] = char.ToUpper(verbe[0][0]) + verbe[0].Substring(1);
 
 			var preposition : String = "";
 			if(gabaritSplit[i] == "[d]")
@@ -216,7 +235,6 @@ public function NewCorvoPhrase()
 				gabarit = regexAdj.Replace(gabarit, adjectif[0], 1);
 			}
 
-
 		}
 
 		gabarit = "''" + " " + gabarit + " " + " ''" ;   
@@ -281,6 +299,178 @@ public function NewCorvoPhrase()
 		public function CopyToSystem(){
 			GUIUtility.systemCopyBuffer = corvoTexte.GetComponent(Text).text;
 		}
+
+		function MakeDisplay()
+		{
+			var goToDestroy = GameObject.FindGameObjectsWithTag("Display");
+			for(var element in goToDestroy)
+				Destroy(element);
+			var textPrefab : GameObject;
+
+			///------Noms-------/////
+			donneesBase = maBase.ReadFullTable(NomsTable);
+			var count = 0;
+			for(var element in donneesBase)
+			{
+				//Première colonne
+				textPrefab = Instantiate(namePrefab) as GameObject;
+				textPrefab.transform.SetParent(nameTexts[0].transform);
+				textPrefab.GetComponent(Text).text = char.ToUpper(element[0][0]) + element[0].Substring(1);
+				
+				//Deuxième colonne
+				textPrefab = Instantiate(namePrefab) as GameObject;
+				textPrefab.transform.SetParent(nameTexts[1].transform);
+				if(element[1] == "1")
+					textPrefab.GetComponent(Text).text = "Masculin";
+				else if(element[1] == "2")
+					textPrefab.GetComponent(Text).text = "Féminin";
+
+				//Deuxième colonne
+				textPrefab = Instantiate(namePrefab) as GameObject;
+				textPrefab.transform.SetParent(nameTexts[2].transform);
+				
+				if(element[2] == "1")
+					textPrefab.GetComponent(Text).text = "Préfixe obligatoire";
+
+				else if(element[2] == "2")
+					textPrefab.GetComponent(Text).text = "Préfixe aléatoire";
+
+				count ++;
+			}
+
+			///------Verbes------//////
+			donneesBase = maBase.ReadFullTable(VerbTable);
+
+			for(var element in donneesBase)
+			{
+				//Première colonne
+				textPrefab = Instantiate(namePrefab) as GameObject;
+				textPrefab.transform.SetParent(verbTexts[0].transform);
+				textPrefab.GetComponent(Text).text = char.ToUpper(element[0][0]) + element[0].Substring(1);
+
+				//Deuxième colonne
+				textPrefab = Instantiate(namePrefab) as GameObject;
+				textPrefab.transform.SetParent(verbTexts[1].transform);
+				if(element[1] == "1")
+					textPrefab.GetComponent(Text).text = "Préfixe obligatoire";
+				else if(element[1] == "2")
+					textPrefab.GetComponent(Text).text = "Préfixe aléatoire";
+			}
+
+			///------Adjectifs------//////
+			donneesBase = maBase.ReadFullTable(AdjTable);
+
+			for(var element in donneesBase)
+			{
+				//Première colonne
+				textPrefab = Instantiate(namePrefab) as GameObject;
+				textPrefab.transform.SetParent(adjTexts[0].transform);
+				textPrefab.GetComponent(Text).text = char.ToUpper(element[0][0]) + element[0].Substring(1);
+
+				//Deuxième colonne
+				textPrefab = Instantiate(namePrefab) as GameObject;
+				textPrefab.transform.SetParent(adjTexts[1].transform);
+				textPrefab.GetComponent(Text).text = char.ToUpper(element[1][0]) + element[1].Substring(1);
+
+				//Troisième colonne ne sert à rien 
+				// textPrefab = Instantiate(namePrefab) as GameObject;
+				// textPrefab.transform.SetParent(adjTexts[2].transform);
+				// if(element[1] == "1")
+				// 	textPrefab.GetComponent(Text).text = "Préfixe obligatoire";
+				// else if(element[1] == "2")
+				// 	textPrefab.GetComponent(Text).text = "Préfixe aléatoire";
+
+			}
+
+			///------Préfixes------//////
+			donneesBase = maBase.ReadFullTable(PrefTable);
+
+			for(var element in donneesBase)
+			{
+				//Première colonne
+				textPrefab = Instantiate(namePrefab) as GameObject;
+				textPrefab.transform.SetParent(prefText.transform);
+				textPrefab.GetComponent(Text).text = char.ToUpper(element[0][0]) + element[0].Substring(1);
+
+			}
+
+			///------Gabarits------//////
+			donneesBase = maBase.ReadFullTable(GabTable);
+
+			for(var element in donneesBase)
+			{
+				//Première colonne
+				textPrefab = Instantiate(namePrefab) as GameObject;
+				textPrefab.transform.SetParent(gabText.transform);
+				textPrefab.GetComponent(Text).text = char.ToUpper(element[0][0]) + element[0].Substring(1);
+			}
+		}
+
+		function AjouterALaBase()
+		{
+			var tableToUse : String;
+			var genre : String;
+			var prefixe : String;
+
+
+			if(panels[0].activeSelf)
+				tableToUse = NomsTable;
+			if(panels[1].activeSelf)
+				tableToUse = VerbTable;
+			if(panels[2].activeSelf)
+				tableToUse = AdjTable;
+			if(panels[3].activeSelf)
+				tableToUse = PrefTable;
+			if(panels[4].activeSelf)
+				tableToUse = GabTable;
+
+			var value = inputField.GetComponent(Text).text;
+			value = "'"+ value +"'";
+			var ArrayValue : String[];
+
+			if(tableToUse == NomsTable)
+			{
+				Debug.Log("On est dans les noms !");
+				if(boutonGenre.GetComponent(Text).text == "Féminin")
+					genre = "2";
+				else
+					genre = "1";
+
+				if(boutonPrefixe.GetComponent(Text).text == "Préfixe aléatoire")
+					prefixe = "2";
+				else
+					prefixe = "1";
+
+				ArrayValue = [value,genre,prefixe];
+
+			}
+
+			else if(tableToUse == VerbTable)
+			{
+				if(boutonPrefixe.GetComponent(Text).text == "Préfixe aléatoire")
+					prefixe = "2";
+				else
+					prefixe = "1";
+
+				ArrayValue = [value,prefixe];
+			}
+
+			else if(tableToUse == AdjTable)
+			{
+				ArrayValue = [value,inputField2.GetComponent(Text).text,"2"];
+			}
+			else
+				ArrayValue = [value];
+
+			Debug.Log(ArrayValue[0] + " - " + ArrayValue[1] + " - " + ArrayValue[2]);
+
+			maBase.InsertInto(tableToUse,ArrayValue);
+
+
+			MakeDisplay();
+		}
+
+
 
 /*
 
