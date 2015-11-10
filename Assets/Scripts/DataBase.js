@@ -42,6 +42,8 @@ var prefText : GameObject;
 var gabText : GameObject;
 
 var namePrefab : GameObject;
+var supprimerBouton : GameObject;
+
 
 ///////AU DEBUT ON CREE LA TABLE SI ELLE N'EXISTE PAS
 
@@ -453,7 +455,7 @@ function AjouterALaBase()
 	var prefixe : String;
 
 	var tableToUse = FindTable();
-	
+
 	var value = inputField.GetComponent(Text).text;
 	var ArrayValue : String[];
 
@@ -532,6 +534,7 @@ public function SupprimerDeLaBase()
 			maBase.DeleteFrom(tableToUse,"MainValue","=","'"+display.GetComponent(Text).text.ToLower()+"'");
 
 		MakeDisplay();
+		supprimerBouton.SetActive(false);
 	}
 
 
