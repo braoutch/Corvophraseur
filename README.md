@@ -5,9 +5,10 @@ Pour l'instant, Le programme fonctionne en standalone sur windows - mac - linux,
 Revers de la médaille, Unity, tout sauf léger.
 
 Fonctionnalités :
+
  - Génération des phrases du corvophraseur. Le dictionnaire de base est repris du projet original, dont on trouve encore un applescript sur Sourceforge :
  http://sourceforge.net/projects/corvophraseur/
  
  - Copie dans le presse-papier d'un simple clic
  
- - À VENIR : Panel d'option pour enrechir la base de données localement.
+ - Panel d'option pour personaliser la base de données localement, ou la réinitialiser en maintenant ESC une dizaine de secondes.
