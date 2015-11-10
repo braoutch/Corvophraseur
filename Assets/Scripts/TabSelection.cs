@@ -15,7 +15,7 @@ public class TabSelection : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		popUp.SetActive(false);
 	}
 	
 	// Update is called once per frame

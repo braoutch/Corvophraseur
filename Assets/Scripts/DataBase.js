@@ -44,6 +44,8 @@ var gabText : GameObject;
 var namePrefab : GameObject;
 var supprimerBouton : GameObject;
 
+var timeToReset : int;
+
 
 ///////AU DEBUT ON CREE LA TABLE SI ELLE N'EXISTE PAS
 
@@ -120,6 +122,7 @@ function InitializeDataBase()
 		maBase.InsertInto(gabTable,arrayElement2);
 	}
 
+MakeDisplay();
 }
 
 
@@ -130,6 +133,28 @@ function Start ()
 	//InitializeDataBase();
 	NewCorvoPhrase();
 	MakeDisplay();
+
+}
+
+function Update()
+{
+	if(Input.GetKey(KeyCode.Escape))
+		timeToReset++;
+	else
+		timeToReset = 0;
+
+	if(timeToReset > 200)
+	{
+		Debug.Log("On reset !!!!!!");
+		timeToReset = 0;
+		
+		maBase.ClearTable(NomsTable);
+		maBase.ClearTable(VerbTable);
+		maBase.ClearTable(AdjTable);
+		maBase.ClearTable(PrefTable);
+		maBase.ClearTable(GabTable);
+		InitializeDataBase();
+	}
 
 }
 
@@ -306,6 +331,7 @@ function MakeDisplay()
 	var goToDestroy = GameObject.FindGameObjectsWithTag("Display");
 	for(var element in goToDestroy)
 		Destroy(element);
+
 	var textPrefab : GameObject;
 
 	///------Noms-------/////

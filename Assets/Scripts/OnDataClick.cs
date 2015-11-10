@@ -26,14 +26,14 @@ public class OnDataClick : MonoBehaviour {
 		int count = 0;
 
 		Transform[] Objects = new Transform[gameObject.transform.parent.parent.childCount];
-		Debug.Log("Ici on a combien d'éléments ? " + gameObject.transform.parent.parent.childCount);
+		//Debug.Log("Ici on a combien d'éléments ? " + gameObject.transform.parent.parent.childCount);
 
 		for(int i = 0 ; i < gameObject.transform.parent.parent.childCount ; i++)
 		Objects[i] = gameObject.transform.parent.parent.GetChild(i).GetChild(int.Parse(gameObject.name));
 
 		if(!isSelected)
 		{
-			Debug.Log("Touché le bouton " + gameObject.GetComponent<Text>().text);
+			//Debug.Log("Touché le bouton " + gameObject.GetComponent<Text>().text);
 
 			foreach(Transform thisObject in Objects)
 			thisObject.GetChild(0).GetComponent<Image>().enabled = true;
@@ -47,9 +47,13 @@ public class OnDataClick : MonoBehaviour {
 		isSelected = !isSelected;
 
 		count = 0;
-		foreach(Transform thisObject in Objects)
-		if (thisObject.GetChild(0).GetComponent<Image>().enabled == true)
-		count++;
+
+		foreach(GameObject thisObject in GameObject.FindGameObjectsWithTag("Display"))
+		if (thisObject.transform.GetChild(0).GetComponent<Image>().enabled == true)
+		{
+			count++;
+		}
+		Debug.Log(count + " Objets sélectionnés.");
 
 		if (count == 0)
 		supprimerBouton.SetActive(false);
