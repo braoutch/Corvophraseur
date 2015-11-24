@@ -30,7 +30,7 @@ var genreActuel;
 
 //Et ça c'est pour l'édition / l'affichage de la base de donnée
 var panels : GameObject[];
-var inputField : GameObject;
+var inputField : InputField;
 var boutonGenre : GameObject;
 var boutonPrefixe : GameObject;
 var inputField2 : GameObject;
@@ -44,7 +44,8 @@ var gabText : GameObject;
 var namePrefab : GameObject;
 var supprimerBouton : GameObject;
 
-var timeToReset : int;
+//Pour réinitialiser
+var resetPanel : GameObject;
 
 
 ///////AU DEBUT ON CREE LA TABLE SI ELLE N'EXISTE PAS
@@ -122,7 +123,7 @@ function InitializeDataBase()
 		maBase.InsertInto(gabTable,arrayElement2);
 	}
 
-MakeDisplay();
+	MakeDisplay();
 }
 
 
@@ -138,24 +139,8 @@ function Start ()
 
 function Update()
 {
-	if(Input.GetKey(KeyCode.Escape))
-		timeToReset++;
-	else
-		timeToReset = 0;
-
-	if(timeToReset > 200)
-	{
-		Debug.Log("On reset !!!!!!");
-		timeToReset = 0;
-		
-		maBase.ClearTable(NomsTable);
-		maBase.ClearTable(VerbTable);
-		maBase.ClearTable(AdjTable);
-		maBase.ClearTable(PrefTable);
-		maBase.ClearTable(GabTable);
-		InitializeDataBase();
-	}
-
+	if(Input.GetKey(KeyCode.Escape) && !resetPanel.activeSelf)
+		resetPanel.SetActive(true);
 }
 
 function OnApplicationQuit()
@@ -482,7 +467,7 @@ function AjouterALaBase()
 
 	var tableToUse = FindTable();
 
-	var value = inputField.GetComponent(Text).text;
+	var value = inputField.text;
 	var ArrayValue : String[];
 
 	if(value != "")
@@ -534,6 +519,7 @@ function AjouterALaBase()
 			maBase.InsertInto(tableToUse,ArrayValue);
 			MakeDisplay();
 		}
+		inputField.text = "C'est bon !";
 	}
 }
 
@@ -543,7 +529,7 @@ public function SupprimerDeLaBase()
 	var tableToUse = FindTable();
 
 	var texts = new ArrayList();
-	for(var display in GameObject.FindGameObjectsWithTag("Display"))
+	for(var display in GameObject.FindGameObjectsWithTag("Display")){
 		if(display.transform.GetChild(0).GetComponent(Image).enabled == true)
 		{
 			if(display.transform.parent.name == "Name")
@@ -553,15 +539,32 @@ public function SupprimerDeLaBase()
 				count++;
 			}
 		}
-
-		Debug.Log(count + " Objets à supprimer.");
-
-		for(var display in texts)
-			maBase.DeleteFrom(tableToUse,"MainValue","=","'"+display.GetComponent(Text).text.ToLower()+"'");
-
-		MakeDisplay();
-		supprimerBouton.SetActive(false);
 	}
+
+	Debug.Log(count + " Objets à supprimer.");
+
+	for(var display in texts)
+		maBase.DeleteFrom(tableToUse,"MainValue","=","'"+display.GetComponent(Text).text.ToLower()+"'");
+
+	MakeDisplay();
+	supprimerBouton.SetActive(false);
+}
+
+public function ResetDataBase()
+{
+	maBase.ClearTable(NomsTable);
+	maBase.ClearTable(VerbTable);
+	maBase.ClearTable(AdjTable);
+	maBase.ClearTable(PrefTable);
+	maBase.ClearTable(GabTable);
+	InitializeDataBase();
+	resetPanel.SetActive(false);
+}
+
+public function DontResetDataBase()
+{
+		resetPanel.SetActive(false);
+}
 
 
 
