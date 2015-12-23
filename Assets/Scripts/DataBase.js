@@ -72,6 +72,7 @@ function InitializeDataBase()
 		maBase.CreateTable (nomsTable,nomColonnesNoms,valeursColonnesNoms);
 		maBase.CreateTable (prefTable,nomColonnesPref,valeursColonnesPref);
 		maBase.CreateTable (gabTable,nomColonnesGab,valeursColonnesGab);
+		Debug.Log("Tout est créé !");
 	}
 
 	catch(e)
@@ -85,6 +86,8 @@ function InitializeDataBase()
 	var adjectifs = [["à court rayon d''action", "à court rayon d''action", "0"], ["à grand rayon d''action", "à grand rayon d''action", "0"], ["à haute vitesse", "à haute vitesse", "0"], ["adaptatif", "adaptative", "2"], ["alternatif", "alternative", "2"], ["alvéolé", "alvéolée", "2"], ["artificiel", "artificielle", "2"], ["atomique", "atomique", "2"], ["baleiné", "baleinée", "2"], ["ballistique", "ballistique", "2"], ["basse vitesse", "basse vitesse", "2"], ["binaire", "binaire", "2"], ["bouffoné", "bouffonée", "2"], ["calorifique", "calorifique", "2"], ["carpien", "carpienne", "2"], ["centrique", "centrique", "2"], ["compressé", "compressée", "2"], ["connotatif", "connotative", "2"], ["corporel", "corporelle", "2"], ["cythérien", "cythérienne", "2"], ["dimensionnel", "dimensionnelle", "2"], ["directionnel", "directionnelle", "2"], ["dirigé", "dirigée", "2"], ["dynamique", "dynamique", "2"], ["encrypté", "encryptée", "2"], ["génique", "génique", "2"], ["gildoique", "gildoique", "2"], ["gravifique", "gravifique", "2"], ["gravitationnel", "gravitationnelle", "2"], ["holographique", "holographique", "2"], ["instable", "instable", "2"], ["interstellaire", "interstellaire", "2"], ["ionisé", "ionisée", "2"], ["linéaire", "linéaire", "2"], ["localisé", "localisée", "2"], ["magnétique", "magnétique", "2"], ["mécanique", "mécanique", "2"], ["microscopique", "microscopique", "2"], ["modulaire", "modulaire", "2"], ["moléculaire", "moléclaire", "2"], ["moncturien", "moncturienne", "2"], ["navigationnel", "navigationnelle", "2"], ["oblatif", "oblative", "2"], ["ossiphazolé", "ossiphazolée", "2"], ["parabolique", "parabolique", "2"], ["parallele", "parallele", "2"], ["phasé", "phasée", "2"], ["phasique", "phasique", "2"], ["plutonnant", "plutonnante", "2"], ["plutonné", "plutonnée", "2"], ["pourniflant", "pourniflante", "2"], ["quantique", "quantique", "2"], ["refroidi", "refroidie", "2"], ["réplicatif", "réplicative", "2"], ["résistant", "résistante", "2"], ["résonnant", "résonnante", "2"], ["spatial", "spatiale", "2"], ["spinoidal", "spinoidale", "2"], ["statique", "statique", "2"], ["stellaire", "stellaire", "2"], ["temporel", "temporelle", "2"], ["trigloidal", "trigloidale", "2"], ["valvué", "valvuée", "2"], ["véloce", "véloce", "2"], ["vibratile", "vibratile", "2"]];
 	var prefixes = ["aéro", "ana", "anti", "auto", "bi", "bulbo", "capillo", "crypto", "extra", "hepta", "hétéro", "homo", "méta", "micro", "morpho", "morvo", "multi", "néo", "non", "nucléo", "octo", "penta", "poly", "proto", "pseudo", "puslo", "quadri", "rétro", "servo", "spiro", "sub", "sur", "thermo", "theta", "trans", "tri", "turbo", "ultra"];
 	var gabarits = ["Si nous pouvons [v] [n] [a], nous devrions pouvoir [v] [n] [a] et [v] [n] [a] !", "Capitaine, je ne peux pas [v] [n] parce que [n] [a] est sur le point [d] [n] [a] !", "[v] [n] [a] est illogique, puisque [n] [a] va [v] [n] [a].", "Il est possible que [n] [a] puisse [v] [n] [a], mais seulement si nous pouvons [v] [n] [a] et [v] [n] [a] !", "Pas de panique ! [v] [n] [a] ne nous empêche pas [d] [n] [a] ni même [d] [n] [a].", "Voici [n] [a] dont il est temps [d] [n] [a] sans oublier [d] [n] [a].", "Damned, [n] [a] ne peut pas [v] [n] [a] ! Nous allons être obligé [d] [n] [a]...", "Tout va bien a bord. [n] [a] semble [v] correctement. Mais nous devrions [v] [n] [a] pour plus de sécurité.", "Alerte ! [n] [a] semble [v] dangereusement ! Il faut [v] [n] [a] d''urgence !!!", "Veuillez [v] [n] [a] avant [d] sciemment."];
+
+	try{
 
 	for(var element in verbes)
 	{
@@ -122,16 +125,33 @@ function InitializeDataBase()
 		var arrayElement2 = ["'"+element+"'"];
 		maBase.InsertInto(gabTable,arrayElement2);
 	}
-
-	MakeDisplay();
+}
+catch(e)
+{
+	Debug.LogError("La table est déjà pleine !");
 }
 
+	MakeDisplay();
+	PlayerPrefs.SetInt("FirstLaunch",0);
+}
 
-function Start () 
+function Awake()
 {
+
+	Debug.Log("starting awake");
 	maBase = new dbAccess() ;
 	maBase.OpenDB(nomBase);  
-	//InitializeDataBase();
+
+	InitializeDataBase();
+	Debug.Log("finished awake");
+}
+function Start () 
+{
+	
+
+	Debug.Log("réussi à ouvrir la base");
+
+
 	NewCorvoPhrase();
 	MakeDisplay();
 
