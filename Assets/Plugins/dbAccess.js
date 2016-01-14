@@ -129,8 +129,11 @@ class dbAccess {
 }
 function SingleSelectWhereString(tableName : String, itemToSelect : String, wCol : String, wPar : String, wValue : String):String
 { 
+ Debug.Log("Trying to request the ID !");
+
 	var query : String;
 	query = "SELECT " + itemToSelect + " FROM " + tableName + " WHERE " + wCol + wPar + wValue; 
+    Debug.Log(query);
 	dbcmd = dbcon.CreateCommand();
 	dbcmd.CommandText = query; 
 	reader = dbcmd.ExecuteReader();
